@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_amber_A200">
+
+    <ImageView
+        android:id="@+id/iv_welcome_logo1"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="130dp"
+        android:alpha="1"
+        android:src="@drawable/cristina1" />
+
+    <ImageView
+        android:id="@+id/iv_welcome_logo2"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="130dp"
+        android:alpha="1"
+        android:src="@drawable/cristina2"
+        tools:alpha="1" />
+
+    <TextView
+        android:id="@+id/tv_welcome_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="280dp"
+        android:alpha="0"
+        android:text="Gank福利"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        tools:alpha="1" />
+
+    <TextView
+        android:id="@+id/tv_welcome_label2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="340dp"
+        android:alpha="0"
+        android:text="by blink_dagger V1.0.0"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        tools:alpha="1" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="80dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_next1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:alpha="0"
+            android:src="@drawable/ic_next_white"
+            tools:alpha="1" />
+
+        <ImageView
+            android:id="@+id/iv_next2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:alpha="0"
+            android:src="@drawable/ic_next_yellow_dark"
+            tools:alpha="1" />
+
+        <ImageView
+            android:id="@+id/iv_next3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:alpha="0"
+            android:src="@drawable/ic_next_yellow_light"
+            tools:alpha="1" />
+    </LinearLayout>
+</RelativeLayout>

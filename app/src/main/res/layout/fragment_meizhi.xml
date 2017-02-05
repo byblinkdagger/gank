@@ -1,0 +1,107 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.home.frag.meizhi.MeizhiFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="12dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="6dp"
+                app:cardElevation="5dp"
+                app:contentPadding="8dp">
+
+                <ImageView
+                    android:id="@+id/iv_firstcard"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="6dp"
+                app:cardElevation="5dp"
+                app:contentPadding="8dp">
+
+                <ImageView
+                    android:id="@+id/iv_secondcard"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:backgroundTint="#ff87ffeb"
+            app:rippleColor="#33728dff"
+            app:elevation="6dp"
+            app:fabSize="mini"
+            app:pressedTranslationZ="12dp"
+            android:id="@+id/fresh_fab"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="6dp"
+                app:cardElevation="5dp"
+                app:contentPadding="8dp">
+
+                <ImageView
+                    android:id="@+id/iv_thirdcard"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="6dp"
+                app:cardElevation="5dp"
+                app:contentPadding="8dp">
+
+                <ImageView
+                    android:id="@+id/iv_fourthcard"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

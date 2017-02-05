@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".ui.home.HomeActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/frameLayout"
+        />
+
+    <!--android.support.design.widget.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:id="@+id/mTab"></android.support.design.widget.TabLayout-->
+
+    <com.ashokvarma.bottomnavigation.BottomNavigationBar
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.15"
+        android:layout_gravity="bottom"
+        android:id="@+id/bottom_navigation_bar"
+        app:bnbElevation="0dp"
+        ></com.ashokvarma.bottomnavigation.BottomNavigationBar>
+
+</LinearLayout>
