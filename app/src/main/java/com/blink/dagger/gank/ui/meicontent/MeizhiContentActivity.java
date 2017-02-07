@@ -51,6 +51,8 @@ public class MeizhiContentActivity extends AppCompatActivity implements View.OnC
     ImageView view_yellow;
     ImageView view_origin;
 
+     Bitmap originBitmap;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,18 +64,18 @@ public class MeizhiContentActivity extends AppCompatActivity implements View.OnC
         picUrl = meizhiIntent.getStringExtra("picURL");
         Picasso.with(this).load(picUrl).into(ivContent);
         fabCutPic.setOnClickListener(this);
+        originBitmap = BitmapUtil.drawableToBitmap(ivContent.getDrawable());
         savaPic();
     }
 
     @Override
     public void onClick(View v) {
-        Bitmap bitmap = BitmapUtil.drawableToBitmap(ivContent.getDrawable());
         switch (v.getId()) {
             case R.id.fab_cut_pic:
                 if (canExpanded) {
                     viewStub.setVisibility(View.VISIBLE);
                     canExpanded = false;
-                    initImageFilter(bitmap);
+                    initImageFilter(originBitmap);
                     registerClickListener();
                 } else {
                     viewStub.setVisibility(View.INVISIBLE);
@@ -82,31 +84,31 @@ public class MeizhiContentActivity extends AppCompatActivity implements View.OnC
                 break;
 
             case R.id.iv_black:
-                ivContent.setImageBitmap(ColorMatrixUtil.changeToGray(bitmap));
+                ivContent.setImageBitmap(ColorMatrixUtil.changeToGray(originBitmap));
                 viewStub.setVisibility(View.INVISIBLE);
                 canExpanded = true;
                 break;
 
             case R.id.iv_old:
-                ivContent.setImageBitmap(ColorMatrixUtil.changeToOld(bitmap));
+                ivContent.setImageBitmap(ColorMatrixUtil.changeToOld(originBitmap));
                 viewStub.setVisibility(View.INVISIBLE);
                 canExpanded = true;
                 break;
 
             case R.id.iv_polaroid:
-                ivContent.setImageBitmap(ColorMatrixUtil.changeToPolaroid(bitmap));
+                ivContent.setImageBitmap(ColorMatrixUtil.changeToPolaroid(originBitmap));
                 viewStub.setVisibility(View.INVISIBLE);
                 canExpanded = true;
                 break;
 
             case R.id.iv_green:
-                ivContent.setImageBitmap(ColorMatrixUtil.changeToGreen(bitmap));
+                ivContent.setImageBitmap(ColorMatrixUtil.changeToGreen(originBitmap));
                 viewStub.setVisibility(View.INVISIBLE);
                 canExpanded = true;
                 break;
 
             case R.id.iv_yellow:
-                ivContent.setImageBitmap(ColorMatrixUtil.changeToYellow(bitmap));
+                ivContent.setImageBitmap(ColorMatrixUtil.changeToYellow(originBitmap));
                 viewStub.setVisibility(View.INVISIBLE);
                 canExpanded = true;
                 break;
