@@ -3,15 +3,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     android:id="@+id/root_view"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.blink.dagger.gank.ui.meicontent.MeizhiContentActivity">
 
     <com.blink.dagger.gank.widget.PinchImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/iv_content"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/ic_cut_pic"
+        app:elevation="0dp"
+        app:fabSize="mini"
+        app:pressedTranslationZ="12dp"
+        android:id="@+id/fab_cut_pic"
+        />
+
+    <ViewStub
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout="@layout/scroll_view_with_thumb"
+        android:layout_alignParentBottom="true"
+        android:inflatedId="@+id/vs_thumb"
+        android:id="@+id/view_stub"/>
+
 </RelativeLayout>

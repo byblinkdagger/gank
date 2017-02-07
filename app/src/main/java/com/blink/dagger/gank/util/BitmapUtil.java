@@ -66,7 +66,7 @@ public class BitmapUtil {
         FileOutputStream fileOutputStream = null;
         try {
             fileOutputStream = new FileOutputStream(file);
-            bitmap.compress(Bitmap.CompressFormat.PNG, 100,
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 100,
                     fileOutputStream);
             fileOutputStream.flush();
 
