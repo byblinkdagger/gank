@@ -15,7 +15,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class RetrofitUtil {
 
     private static Gank gankService;
-    private static Retrofit retrofit;
+    private static volatile Retrofit retrofit;
 
     public static Gank singletonGank (){
         if (retrofit == null) {
